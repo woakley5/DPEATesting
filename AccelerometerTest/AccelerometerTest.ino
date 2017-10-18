@@ -16,6 +16,11 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (Serial1.available() > 0) {
     if (imu.encode(Serial1.read())) {  // Reads byte from buffer.  Valid packet returns true.
+      Serial.print("PITCH - ");
+      Serial.print(imu.pitch);
+      Serial.print(" ROLL - ");
+      Serial.print(imu.roll);
+      Serial.print(" YAW - ");
       Serial.println(imu.yaw);
     }
   }

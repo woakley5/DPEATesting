@@ -12,7 +12,7 @@ void setup()
  
 void loop() 
 {
-   unsigned long startMillis= millis();  // Start of sample window
+   /*unsigned long startMillis= millis();  // Start of sample window
    unsigned int peakToPeak = 0;   // peak-to-peak level
  
    unsigned int signalMax = 0;
@@ -36,14 +36,18 @@ void loop()
          }
       }
    }
+   
    peakToPeak = signalMax - signalMin;  // max - min = peak-peak amplitude
-   double volts = (peakToPeak * 5.0) / 1024;  // convert to volts
-
-   if(volts > 1.0){
-    digitalWrite(ledPin, HIGH);
-    Serial.println("Triggered");
-   }
-   else{
-    digitalWrite(ledPin, LOW);
-   }
+   double volts = (peakToPeak * 5.0) / 1024;  // convert to volts*/
+  int r = analogRead(0);
+   //if(r > 600){
+    //Serial.print("Triggered - ");
+    Serial.print(r);
+     Serial.print(" VALUE  ");
+     Serial.print(1024);
+     Serial.print(" CONSTANT ");
+     Serial.println();
+    //delay(150);
+   //}
+  
 }
