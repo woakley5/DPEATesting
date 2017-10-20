@@ -1,5 +1,5 @@
 #include <Adafruit_NeoPixel.h>
-
+#include <Wire.h>
 
 #define PIN 10
 
